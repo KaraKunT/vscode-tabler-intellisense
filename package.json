@@ -1,0 +1,78 @@
+{
+    "name": "tabler-intellisense",
+    "version": "1.0.0",
+    "description": "Autocomplete and hover preview for Tabler Icons (ti) CSS classes",
+    "homepage": "https://github.com/KaraKunT/vscode-tabler-intellisense",
+    "bugs": {
+        "url": "https://github.com/KaraKunT/vscode-tabler-intellisense/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/KaraKunT/vscode-tabler-intellisense.git"
+    },
+    "license": "ISC",
+    "author": "",
+    "type": "commonjs",
+    "main": "./dist/extension.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run build",
+        "build": "tsc -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/node": "^24.10.2",
+        "@types/vscode": "^1.105.0",
+        "typescript": "^5.9.3",
+        "vsce": "^2.15.0"
+    },
+    "engines": {
+        "vscode": "^1.105.0"
+    },
+    "keywords": [
+        "tabler",
+        "tabler icons",
+        "icons",
+        "intellisense",
+        "autocomplete",
+        "css",
+        "webfont",
+        "svelte",
+        "sveltekit",
+        "html",
+        "react",
+        "cursor"
+    ],
+    "icon": "image.png",
+    "galleryBanner": {
+        "color": "#0f172a",
+        "theme": "dark"
+    },
+    "displayName": "Tabler Icons IntelliSense",
+    "publisher": "karakunt",
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onLanguage:html",
+        "onLanguage:svelte",
+        "onLanguage:javascript",
+        "onLanguage:typescript"
+    ],
+    "contributes": {
+        "languages": [],
+        "configuration": {
+            "type": "object",
+            "title": "Tabler Icons IntelliSense",
+            "properties": {
+                "tablerIntellisense.enableHover": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Show an icon preview on hover"
+                }
+            }
+        }
+    }
+}
